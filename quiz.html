@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>แบบทดสอบอาชีพ</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f1f5f9;
+text-align:center;
+padding:40px;
+}
+
+button{
+padding:10px 20px;
+margin:10px;
+border:none;
+border-radius:8px;
+background:#3b82f6;
+color:white;
+cursor:pointer;
+}
+
+</style>
+
+<script>
+
+let tech = 0
+let creative = 0
+
+function t(){
+tech++
+next()
+}
+
+function c(){
+creative++
+next()
+}
+
+let q = 1
+
+function next(){
+
+q++
+
+if(q==2){
+document.getElementById("q").innerHTML="คุณชอบทำงานกับคอมพิวเตอร์ไหม"
+}
+
+else if(q==3){
+document.getElementById("q").innerHTML="คุณชอบแก้ปัญหาหรือวิเคราะห์ข้อมูลไหม"
+}
+
+else if(q==4){
+document.getElementById("q").innerHTML="คุณชอบออกแบบหรือความคิดสร้างสรรค์ไหม"
+}
+
+else if(q==5){
+document.getElementById("q").innerHTML="คุณชอบสอนคนอื่นไหม"
+}
+
+else if(q==6){
+document.getElementById("q").innerHTML="คุณสนใจธุรกิจหรือไม่"
+}
+
+else if(q==7){
+document.getElementById("q").innerHTML="คุณชอบวางแผนการตลาดไหม"
+}
+
+else if(q==8){
+document.getElementById("q").innerHTML="คุณชอบทำงานอิสระไหม"
+}
+
+else{
+
+if(tech>creative){
+alert("อาชีพที่เหมาะ: โปรแกรมเมอร์ หรือ Data Analyst")
+}
+
+else{
+alert("อาชีพที่เหมาะ: นักออกแบบกราฟิก หรือ นักการตลาด")
+}
+
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>แบบทดสอบค้นหาอาชีพ</h1>
+
+<h2 id="q">คุณสนใจเทคโนโลยีหรือไม่</h2>
+
+<button onclick="t()">ใช่</button>
+<button onclick="c()">ไม่ใช่</button>
+
+<br><br>
+
+<a href="index.html">กลับหน้าหลัก</a>
+
+</body>
+
+</html>
